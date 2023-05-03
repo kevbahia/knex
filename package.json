@@ -1,0 +1,31 @@
+{
+  "name": "knex",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testTimeout 10000 --forceExit --runInBand"
+  },
+  "imports": {
+    "#src/*": "./src/*",
+    "#database/*": "./src/database/*",
+    "#routes/*": "./src/routes/*",
+    "#controllers/*": "./src/controllers/*",
+    "#services/*": "./src/services/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "2.4.2",
+    "knex-mock-client": "2.0.0",
+    "mssql": "7.3.5",
+    "axios": "0.24.0",
+    "restify": "8.5.1",
+    "restify-errors": "8.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "jest-junit": "^12.2.0"
+  }
+}
